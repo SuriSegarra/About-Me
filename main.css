@@ -1,0 +1,138 @@
+
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: black;
+}
+
+.inner_header{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color:coral;
+}
+.logo_container
+{
+    height: 100%;
+    display: table;
+    float: left;
+   
+}
+.logo_container h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 200;
+    margin:center;
+}
+.logo_container h1 span{
+    font-weight: 800;
+}
+
+.inst{
+    font-size: 40px;
+    margin-top: 50px;
+}
+p{
+    font-size: 20px;
+}
+
+.list{
+    margin-top: 100px;
+}
+
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25;
+
+}
+
+.modal-content{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+
+}
+
+.close-button{
+    float: right;
+    width: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgrey;
+}
+
+.close-button:hover{
+    background-color: darkgrey;
+}
+
+.show-modal{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s,opacity 0.25s 0s, transforma 0.25s;
+}
+
+.color{
+    margin-top: 20px;
+}
+.red{
+margin-bottom: 20px;
+}
+.yellow{
+    margin-bottom: 20px;
+}
+.blue{
+    margin-bottom: 20px;
+}
+.animal{
+    margin-bottom: 20px;
+}
+.sloth{
+    margin-bottom: 20px;
+}
+.giraffe{
+    margin-bottom: 20px;
+}
+.chicken{
+    margin-bottom: 20px;
+}
+.country{
+    margin-bottom: 20px;
+}
+.russia{
+    margin-bottom: 20px;
+}
+.germany{
+    margin-bottom: 20px;
+}
+.result{
+    margin-top: 50px;
+    font-family: Josefin Arial, Helvetica, sans-serif;
+}
+button {
+    background-color: coral;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+}
