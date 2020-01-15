@@ -12,7 +12,7 @@ const compareNumbers = (guess, correctNumber) => {
 const playGame = () => {
     const paragraph = document.getElementById('results');
     
-    console.log(number)
+    console.log(number);
     const userGuess = document.getElementById('the-number');
 
     const value = compareNumbers(userGuess.value, number);
