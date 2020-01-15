@@ -11,9 +11,10 @@ const compareNumbers = (guess, correctNumber) => {
 
 const playGame = () => {
     const paragraph = document.getElementById('results');
-    const number = Math.floor(Math.random() * 10).toString();
+
     console.log(number)
     const userGuess = document.getElementById('the-number');
+
     const value = compareNumbers(userGuess.value, number);
     if (value === 0){
         paragraph.textContent = 'Congrats! You win!';
@@ -27,7 +28,7 @@ const playGame = () => {
 };
 
 
-
+const number = Math.floor(Math.random() * 10).toString();
 const button = document.getElementById('guess-button');
 
 button.addEventListener(`click`, playGame);
