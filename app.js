@@ -1,25 +1,53 @@
-import isYes from './isYes.js'
-const button = document.getElementById('quizbutton');
-const total = document.getElementById('total');
+const compareNumbers = (guess, correctNumber) => {
+    if (guess === correctNumber){
+        return 0;
+    } else if (guess < correctNumber){
+        return -1;
+    }
+    else if (guess > correctNumber){
+        return 1;
+    }
+};
+
+const playGame = () => {
+    const paragraph = document.getElementById('results');
+    
+    console.log(number)
+    const userGuess = document.getElementById('the-number');
+
+    const value = compareNumbers(userGuess.value, number);
+    if (value === 0){
+        paragraph.textContent = 'Congrats! You win!';
+        imgOne.src = 'https://i.pinimg.com/564x/e3/a7/dd/e3a7dd179b47f62dfc26c9cd17af796b.jpg';
+    }
+    if (value < 0){
+        paragraph.textContent = 'Too Low!!';
+    }
+    if (value > 0){
+        paragraph.textContent = 'Too High!!';
+    
+
+       
+        
+     
+    }
+};
+
+const turnLevel = document.getElementById('turn-level');
+turnLevel.textContent = 0;
+let turn = 0;
+const number = Math.floor(Math.random() * 10).toString();
+const button = document.getElementById('guess-button');
 
 
+button.addEventListener(`click`, playGame);
+//GAME
 button.addEventListener('click', () => {
-console.log(`it's working!!`); 
-
-const theName = prompt (`What\'s your name?`);
-const confirmation = prompt (`${theName}, Are you sure you want to take the test?`);
-
-if(confirmation === false) return;
-
-const answer1 = prompt(`Is My Favorite Color  Listed Below`);
-const answer2 = prompt (`Is My Favorite Animal In This List`);
-const answer3 = prompt (`Have I  Been In Any Of This Countries?`);
-let count = 0
-
-
-if(isYes(answer1)) count+=1;
-if(!isYes(answer2)) count+=1;
-if(isYes(answer3)) count+=1;
-
-total.textContent=`${theName}, You got ${count} correct`;
+    turn = turn + 1;
+    turnLevel.textContent = turn;
+    if (turn >= 4) {
+        imgOne.src = 'https://i.pinimg.com/564x/34/74/d7/3474d7dcb1b56b373516205302bac6ed.jpg';}  
 });
+
+
+
