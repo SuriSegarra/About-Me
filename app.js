@@ -1,25 +1,36 @@
-import isYes from './isYes.js'
-const button = document.getElementById('quizbutton');
-const total = document.getElementById('total');
+const compareNumbers = (guess, correctNumber) => {
+    if (guess === correctNumber){
+        return 0;
+    } else if (guess < correctNumber){
+        return -1;
+    }
+    else if (guess > correctNumber){
+        return 1;
+    }
+};
+
+const playGame = () => {
+    const paragraph = document.getElementById('results');
+    const number = Math.floor(Math.random() * 10).toString();
+    console.log(number)
+    const userGuess = document.getElementById('the-number');
+    const value = compareNumbers(userGuess.value, number);
+    if (value === 0){
+        paragraph.textContent = 'Congrats! You win!';
+    }
+    if (value < 0){
+        paragraph.textContent = 'Too Low!!';
+    }
+    if (value > 0){
+        paragraph.textContent = 'Too High!!';
+    }
+};
 
 
-button.addEventListener('click', () => {
-console.log(`it's working!!`); 
 
-const theName = prompt (`What\'s your name?`);
-const confirmation = prompt (`${theName}, Are you sure you want to take the test?`);
+const button = document.getElementById('guess-button');
 
-if(confirmation === false) return;
-
-const answer1 = prompt(`Is My Favorite Color  Listed Below`);
-const answer2 = prompt (`Is My Favorite Animal In This List`);
-const answer3 = prompt (`Have I  Been In Any Of This Countries?`);
-let count = 0
+button.addEventListener(`click`, playGame);
+//GAME
 
 
-if(isYes(answer1)) count+=1;
-if(!isYes(answer2)) count+=1;
-if(isYes(answer3)) count+=1;
-
-total.textContent=`${theName}, You got ${count} correct`;
-});
