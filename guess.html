@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="module" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
 <body>
-   <div id="words"> 
-       <h2>GUESS A NUMBER</h2></div>
+   <div id> 
+       <h1>GUESS A NUMBER</h1>
+       <h2>Instructions</h2>
+    <p>I am thinking of a Number between 1-10. Enter your guess and click on the Guess Button</p></div>
 
    <div>
-       <img src="https://i.pinimg.com/564x/6d/96/5c/6d965ca6becd342194c47228219309ee.jpg" width="400px" height="400px" id="imgOne">
+       <img src="https://content.instructables.com/FKF/3M2G/K1NVASKL/FKF3M2GK1NVASKL.LARGE.jpg" id="imgOne">
    </div>
 
    <div>
@@ -23,12 +26,10 @@
        </button>
    </div>
 
-   <div id="turnLevel">
-       You have this many turns 
-   </div> <span></span>
+   <div class="turn"></div>
+       <span >You have this many turns:</span> <span id="turn-level"></span>
 
    <p id='results'></p>
 
-   <div>Results</div>
 </body>
 </html>
